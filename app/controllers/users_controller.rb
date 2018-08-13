@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     @user = User.find_by(username: params[:username], password: params[:password])
     if @user
       session[:user_id] = @user.id
-      redirect "/show/#{@user.id}"
+      redirect "tweets"
     else
       flash[:message] = "Sorry, username and password do not match."
       redirect "/login"
