@@ -29,7 +29,11 @@ class TweetsController < ApplicationController
     end
   end
 
-  get '/tweets/:id/edit' do 
+  get '/tweets/:id/edit' do
+
+  end
+
+  post '/tweets/edit' do
 
   end 
 
