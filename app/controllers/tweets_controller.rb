@@ -16,4 +16,8 @@ class TweetsController < ApplicationController
     @tweet.save
     redirect "/show/#{current_user.id}"
   end
+
+  get '/tweets/:id' do 
+    erb :'/tweets/show'
+  end 
 end
