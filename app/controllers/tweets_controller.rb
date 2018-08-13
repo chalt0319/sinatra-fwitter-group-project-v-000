@@ -18,14 +18,14 @@ class TweetsController < ApplicationController
   end
 
   get '/tweets/:id' do
-    current_user.tweets.each do |tweet|
+    current_user.tweets.any? do |tweet|
       if tweet.id == params[:id].to_i
         @tweet = Tweet.find(params[:id])
         erb :'/tweets/show_tweet'
       else
         erb :'/users/error'
       end
-    end 
+    end
   end
-  
+
 end
