@@ -5,7 +5,7 @@
     <title><%=@current_user.username%></title>
   </head>
   <body>
-    <h1><%=@current_user.username%></h1>
+    <h1>Welcome, <%=@current_user.username%></h1>
     <ol>
     <% @current_user.tweets.each do |tweet| %>
       <li><%=tweet.content%> - <a href="/tweets/<%=tweet.id%>">View</a> - <a href="/tweets/<%=tweet.id%>/edit">Edit</a></li>
