@@ -6,7 +6,7 @@ class TweetsController < ApplicationController
       erb :'/tweets/tweets'
     else
       redirect "login"
-    end 
+    end
   end
 
   get '/tweets/new' do
@@ -16,11 +16,11 @@ class TweetsController < ApplicationController
 
   post '/tweets' do
     @tweet = Tweet.new(content: params[:content])
-    if @tweet.content !=
+    if @tweet.content != ""
       current_user.tweets << @tweet
       @tweet.save
       redirect "/tweets/#{@tweet.id}"
-    end 
+    end
   end
 
   get '/tweets/:id' do
