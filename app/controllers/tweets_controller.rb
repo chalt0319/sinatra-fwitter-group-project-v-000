@@ -19,15 +19,7 @@ class TweetsController < ApplicationController
 
   get '/tweets/:id' do
     @tweet = Tweet.find(params[:id])
-    result = current_user.tweets.any? do |tweet|
-      tweet.id == params[:id].to_i
-    end
-    if result == true
-      @tweet = Tweet.find(params[:id])
-      erb :'/tweets/show_tweet'
-    else
-      erb :'/users/error'
-    end
+    erb :'/tweets/show_tweet'
   end
 
   get '/tweets/:id/edit' do
