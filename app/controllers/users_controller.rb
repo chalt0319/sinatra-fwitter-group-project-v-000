@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   use Rack::Flash
 
-  get '/login' do
+  get '/login' do 
     erb :'/users/login'
   end
 
