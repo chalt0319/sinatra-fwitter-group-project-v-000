@@ -5,6 +5,8 @@ class UsersController < ApplicationController
   use Rack::Flash
 
   get '/login' do
+    if logged_in? 
+      redirect "/show/#{current_user.id}"
     erb :'/users/login'
   end
 
