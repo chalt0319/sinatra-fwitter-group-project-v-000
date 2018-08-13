@@ -34,8 +34,12 @@ class UsersController < ApplicationController
       @current_user = current_user
       erb :'/users/show'
     else
-      redirect "/users/error"
+      redirect "/error"
     end
+  end
+
+  get '/error' do
+    erb :'/users/error'
   end
 
   get '/logout' do
