@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   use Rack::Flash
 
-  get '/login' do 
+  get '/login' do
     erb :'/users/login'
   end
 
@@ -25,8 +25,12 @@ class UsersController < ApplicationController
 
   post '/signup' do
     @user = User.new(username: params[:username], password: params[:password], email: params[:email])
-    @user.save
-    redirect "/login"
+    if @user
+      @user.save
+      redirect "/login"
+    else
+      erb :'/users/error' 
+    end
   end
 
   get '/show/:id' do
