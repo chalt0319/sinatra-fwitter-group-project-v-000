@@ -18,6 +18,7 @@ class TweetsController < ApplicationController
   end
 
   get '/tweets/:id' do
+    @tweet = Tweet.find(params[:id])
     result = current_user.tweets.any? do |tweet|
       tweet.id == params[:id].to_i
     end
@@ -33,8 +34,8 @@ class TweetsController < ApplicationController
 
   end
 
-  post '/tweets/edit' do
+  post '/tweets/:id' do
 
-  end 
+  end
 
 end
