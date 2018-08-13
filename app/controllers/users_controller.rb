@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do
-    @user = User.new(params)
+    @user = User.new(username: params[:username], password: params[:password], email: params[:email])
     @user.save
     redirect "/login"
   end
