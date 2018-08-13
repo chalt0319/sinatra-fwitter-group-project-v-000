@@ -5,7 +5,7 @@
     <title>Tweet</title>
   </head>
   <body>
-    <h1>Tweet from: <%=current_user.username%></h1>
+    <h1>Tweet from: <%=User.find(@tweet.user_id).username%></h1>
     <p><%=@tweet.content%></p>
     <br>
     <a href="/show/<%=current_user.id%>">Your Home Page</a>
