@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   get '/login' do
     if logged_in?
-      redirect "/show/#{current_user.id}"
+      redirect "/tweets"
     else
       erb :'/users/login'
     end
