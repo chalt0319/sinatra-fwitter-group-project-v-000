@@ -30,6 +30,7 @@ class UsersController < ApplicationController
   end
 
   get '/show/:id' do
+    binding.pry
     if logged_in? && current_user.id == params[:id]
       @current_user = current_user
       erb :'/users/show'
