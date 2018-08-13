@@ -6,11 +6,11 @@
   </head>
   <body>
     <h1><%=@current_user.username%></h1>
-    <ul>
+    <ol>
     <% @current_user.tweets.each do |tweet| %>
       <li><%=tweet.content%></li>
     <%end%>
-    </ul>
+  </ol>
 
     <a href="/tweets/new">Create New Tweet</a> <br>
     <a href="/logout">Logout</a>
