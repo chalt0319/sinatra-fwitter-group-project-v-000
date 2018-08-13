@@ -13,7 +13,7 @@ class TweetsController < ApplicationController
     if logged_in
       @current_user = current_user
       erb :'/tweets/create_tweet'
-    else 
+    else
       redirect "login"
     end 
   end
