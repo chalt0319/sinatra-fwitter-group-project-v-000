@@ -38,8 +38,10 @@ class TweetsController < ApplicationController
     redirect "/tweets/#{@tweet.id}"
   end
 
-  delete '/tweets/:id/delete' do 
-
+  delete '/tweets/:id/delete' do
+    @tweet = Tweet.find(params[:id])
+    @tweet.delete
+    redirect "/show/#{current_user.user_id}"
   end
 
 end
