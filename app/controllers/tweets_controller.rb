@@ -45,7 +45,7 @@ class TweetsController < ApplicationController
       redirect "/show/#{current_user.id}"
     else
       erb :'/users/error'
-    end 
+    end
   end
 
 end
