@@ -23,8 +23,6 @@ class TweetsController < ApplicationController
     end
     if result == true
       @tweet = Tweet.find(params[:id])
-      binding.pry
-
       erb :'/tweets/show_tweet'
     else
       erb :'/users/error'
