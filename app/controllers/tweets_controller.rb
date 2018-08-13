@@ -24,8 +24,7 @@ class TweetsController < ApplicationController
         erb :'/tweets/show_tweet'
       else
         erb :'/users/error'
-    if logged_in? && current_user.tweets.each do {|tweet| }(params[:id].to_i)
-    @tweet = Tweet.find(params[:id])
-    erb :'/tweets/show_tweet'
+      end 
+    end 
   end
 end
