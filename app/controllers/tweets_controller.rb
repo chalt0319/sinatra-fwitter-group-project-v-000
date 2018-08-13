@@ -38,4 +38,8 @@ class TweetsController < ApplicationController
     redirect "/tweets/#{@tweet.id}"
   end
 
+  post '/tweets/:id/delete' do 
+    
+  end 
+
 end
