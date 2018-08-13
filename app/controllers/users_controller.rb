@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     @user = User.new(username: params[:username], password: params[:password], email: params[:email])
     if @user.username != "" && @user.password != "" && @user.email != ""
       @user.save
-      redirect "/login"
+      redirect "/tweets"
     else
       erb :'/users/error'
     end
