@@ -18,12 +18,13 @@ class TweetsController < ApplicationController
   end
 
   get '/tweets/:id' do
-    binding.pry
     result = current_user.tweets.any? do |tweet|
       tweet.id == params[:id].to_i
     end
     if result == true
       @tweet = Tweet.find(params[:id])
+      binding.pry
+
       erb :'/tweets/show_tweet'
     else
       erb :'/users/error'
