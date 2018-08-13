@@ -10,10 +10,7 @@
       <%= flash[:message] %>
     <% end %>
     <form action="/login" method="post">
-      <%binding.pry%>
       <p>Username: <input type="text" name="username" id="username"></p>
-      <%binding.pry%>
-
       <p>Password: <input type="password" name="password" id="password"></p>
       <input type="submit" value="Log In">
     </form>
