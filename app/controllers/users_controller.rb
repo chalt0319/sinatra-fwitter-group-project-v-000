@@ -29,7 +29,7 @@ class UsersController < ApplicationController
       @user.save
       redirect "/login"
     else
-      erb :'/users/error' 
+      erb :'/users/error'
     end
   end
 
