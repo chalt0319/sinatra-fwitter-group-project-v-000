@@ -43,8 +43,9 @@ class TweetsController < ApplicationController
     if session[:user_id] == @tweet.user_id
       @tweet.delete
       redirect "/show/#{current_user.id}"
-    else 
+    else
       redirect "/users/error"
+    end 
   end
 
 end
