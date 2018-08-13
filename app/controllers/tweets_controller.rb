@@ -24,7 +24,8 @@ class TweetsController < ApplicationController
         erb :'/tweets/show_tweet'
       else
         erb :'/users/error'
-      end 
+      end
     end 
   end
+  
 end
