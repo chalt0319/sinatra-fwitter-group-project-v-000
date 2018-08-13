@@ -20,6 +20,8 @@ class TweetsController < ApplicationController
       current_user.tweets << @tweet
       @tweet.save
       redirect "/tweets/#{@tweet.id}"
+    else
+      redirect "/tweets"
     end
   end
 
