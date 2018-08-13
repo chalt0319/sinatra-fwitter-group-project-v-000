@@ -44,7 +44,7 @@ class TweetsController < ApplicationController
       @tweet.delete
       redirect "/show/#{current_user.id}"
     else
-      redirect "/users/error"
+      erb :'/users/error'
     end 
   end
 
