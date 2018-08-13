@@ -5,7 +5,8 @@
     <title>Tweet</title>
   </head>
   <body>
-    <h1>Tweet from: <%=User.find(@tweet.user_id).username%></h1>
+    <%@user = User.find(@tweet.user_id)%>
+    <h1>Tweet from: <%=@user.username%></h1>
     <p><%=@tweet.content%></p>
     <br>
     <form method="post" action="/tweets/<%=@tweet.id%>/delete">
@@ -13,7 +14,7 @@
       <input type="submit" value="delete">
     </form>
     <br>
-    <a href="/show/<%=@tweet.user_id%>">Home Page</a>
+    <a href="/show/<%=@tweet.user_id%>"><%=Home Page</a>
     <br><br>
     <a href="/">Fwitter Home Page</a>
     <br>
