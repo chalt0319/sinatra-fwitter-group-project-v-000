@@ -14,7 +14,7 @@ class TweetsController < ApplicationController
       @current_user = current_user
       erb :'/tweets/create_tweet'
     else
-      redirect "login"
+      redirect "/login"
     end 
   end
 
