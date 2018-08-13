@@ -28,7 +28,7 @@ class TweetsController < ApplicationController
       erb :'/tweets/edit_tweet'
     else
       erb :'/users/error'
-    end 
+    end
   end
 
   post '/tweets/:id' do
@@ -38,8 +38,8 @@ class TweetsController < ApplicationController
     redirect "/tweets/#{@tweet.id}"
   end
 
-  post '/tweets/:id/delete' do 
-    
-  end 
+  delete '/tweets/:id/delete' do 
+
+  end
 
 end
