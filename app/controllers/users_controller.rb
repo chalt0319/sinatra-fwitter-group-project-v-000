@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   end
 
   get '/show/:id' do
-    if logged_in?
+    if logged_in? && current_user.id == params[:id]
       @current_user = current_user
       erb :'/users/show'
     else
