@@ -5,7 +5,7 @@ class TweetsController < ApplicationController
       @tweets = current_user.tweets
       erb :'/tweets/tweets'
     else
-      redirect "login"
+      redirect "/login"
     end
   end
 
@@ -15,7 +15,7 @@ class TweetsController < ApplicationController
       erb :'/tweets/create_tweet'
     else
       redirect "/login"
-    end 
+    end
   end
 
   post '/tweets' do
