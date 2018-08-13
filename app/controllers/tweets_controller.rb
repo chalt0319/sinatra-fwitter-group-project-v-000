@@ -26,7 +26,7 @@ class TweetsController < ApplicationController
     @tweet = Tweet.find(params[:id])
     if session[:user_id] == @tweet.user_id
       erb :'/tweets/edit_tweet'
-    else 
+    else
       erb :'/users/error'
   end
 
