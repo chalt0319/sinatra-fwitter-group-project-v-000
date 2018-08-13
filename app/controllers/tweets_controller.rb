@@ -33,9 +33,13 @@ class TweetsController < ApplicationController
 
   post '/tweets/:id' do
     @tweet = Tweet.find(params[:id])
-    @tweet.content = params[:content]
-    @tweet.save
-    redirect "/tweets/#{@tweet.id}"
+    if params[:content] != "" 
+      @tweet.content = params[:content]
+      @tweet.save
+      redirect "/tweets/#{@tweet.id}"
+    else
+      erb :'/users/error'
+    end 
   end
 
   delete '/tweets/:id/delete' do
