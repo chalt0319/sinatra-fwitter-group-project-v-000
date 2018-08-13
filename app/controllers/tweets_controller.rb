@@ -24,6 +24,7 @@ class TweetsController < ApplicationController
 
   get '/tweets/:id/edit' do
     @tweet = Tweet.find(params[:id])
+    if session[:user_id] == @tweet.user_id
   end
 
   post '/tweets/:id' do
